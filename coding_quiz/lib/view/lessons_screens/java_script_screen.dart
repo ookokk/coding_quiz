@@ -6,7 +6,7 @@ class JavaScriptScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CourseDifficultySelectionTemplate(
+    return const CourseDifficultySelectionTemplate(
         courseName: 'JavaScript', courseImage: 'assets/icons/java-script.png');
   }
 }

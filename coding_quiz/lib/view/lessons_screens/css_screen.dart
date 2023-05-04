@@ -6,7 +6,7 @@ class CssScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CourseDifficultySelectionTemplate(
+    return const CourseDifficultySelectionTemplate(
         courseName: 'CSS', courseImage: 'assets/icons/css.png');
   }
 }

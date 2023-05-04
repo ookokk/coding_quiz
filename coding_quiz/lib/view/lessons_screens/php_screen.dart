@@ -6,7 +6,7 @@ class PhpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CourseDifficultySelectionTemplate(
+    return const CourseDifficultySelectionTemplate(
         courseName: 'PHP', courseImage: 'assets/icons/php.png');
   }
 }

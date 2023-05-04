@@ -3,8 +3,6 @@ import 'package:coding_quiz/constants/padding.dart';
 import 'package:coding_quiz/constants/text_style.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/icons.dart';
-
 class CourseDifficultySelectionTemplate extends StatelessWidget {
   final String courseName;
   final String courseImage;
@@ -22,8 +20,8 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: Row(
-            children: [
-              const IconButton(
+            children: const [
+              IconButton(
                 icon: Icon(
                   Icons.arrow_back,
                   color: Colors.black,

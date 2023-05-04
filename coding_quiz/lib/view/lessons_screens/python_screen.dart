@@ -6,7 +6,7 @@ class PythonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CourseDifficultySelectionTemplate(
+    return const CourseDifficultySelectionTemplate(
         courseName: 'Python', courseImage: 'assets/icons/python.png');
   }
 }

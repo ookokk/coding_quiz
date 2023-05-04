@@ -6,7 +6,7 @@ class TypeScriptScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CourseDifficultySelectionTemplate(
+    return const CourseDifficultySelectionTemplate(
         courseName: 'TypeScript', courseImage: 'assets/icons/typescript.png');
   }
 }
