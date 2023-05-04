@@ -7,11 +7,10 @@ class Assets {
       'assets/fonts/ComicNeue-Italic.ttf';
   static const String fontsComicNeueRegular =
       'assets/fonts/ComicNeue-Regular.ttf';
-  static const String iconsCpp = 'assets/icons/c++.png';
+  static const String iconsCPP = 'assets/icons/c++.png';
   static const String iconsCSharp = 'assets/icons/c-sharp.png';
   static const String iconsCss = 'assets/icons/css.png';
   static const String iconsHtml5 = 'assets/icons/html-5.png';
-  static const String iconsJava = 'assets/icons/java.png';
   static const String iconsJavaScript = 'assets/icons/java-script.png';
   static const String iconsPhp = 'assets/icons/php.png';
   static const String iconsPython = 'assets/icons/python.png';

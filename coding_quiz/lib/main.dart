@@ -1,4 +1,4 @@
-import 'package:coding_quiz/view/course_difficulty_selection_screen.dart';
+import 'package:coding_quiz/view/widgets/course_difficulty_selection_template.dart';
 import 'package:coding_quiz/view/quiz_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: '',
         theme: ThemeData(),
-        home:
-            const CourseDifficultySelectionScreen() /*QuizScreen(
+        home: const CourseDifficultySelectionTemplate(
+            courseName: 'CPP',
+            courseImage:
+                'assets/icons/c++.png') /*QuizScreen(
           collectionName: 'questions',
         )*/
         );

@@ -70,7 +70,7 @@ class LessonCatalogScreen extends StatelessWidget {
           flex: 2,
           child: GestureDetector(
             onTap: () {},
-            child: const Image(image: AssetImage(LessonIcons.javaIcon)),
+            child: const Image(image: AssetImage(LessonIcons.javaScriptIcon)),
           ),
         ),
         const SizedBox(width: 50),
