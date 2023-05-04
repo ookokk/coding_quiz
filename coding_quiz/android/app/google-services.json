@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "844987318785",
+    "firebase_url": "https://coding-quiz-2b817-default-rtdb.firebaseio.com",
+    "project_id": "coding-quiz-2b817",
+    "storage_bucket": "coding-quiz-2b817.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844987318785:android:944be93cc63a7c069df600",
+        "android_client_info": {
+          "package_name": "com.example.coding_quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844987318785-30p2066ahf6bod7adu9n3g3i637vgcq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrwyK_pPrpKwrDu35YwWYQ9Y614s5jSyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844987318785-30p2066ahf6bod7adu9n3g3i637vgcq1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844987318785-35jgcpvlkcq0h6u2uive6c45m28ogmbv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.codingQuiz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
