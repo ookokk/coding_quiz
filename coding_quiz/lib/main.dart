@@ -1,3 +1,4 @@
+import 'package:coding_quiz/view/lessons_screens/java_script_screen.dart';
 import 'package:coding_quiz/view/widgets/course_difficulty_selection_template.dart';
 import 'package:coding_quiz/view/quiz_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,12 +22,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: '',
         theme: ThemeData(),
-        home: const CourseDifficultySelectionTemplate(
-            courseName: 'CPP',
-            courseImage:
-                'assets/icons/c++.png') /*QuizScreen(
-          collectionName: 'questions',
-        )*/
-        );
+        home: JavaScriptScreen());
   }
 }

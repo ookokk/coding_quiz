@@ -6,11 +6,17 @@ import 'package:flutter/material.dart';
 class CourseDifficultySelectionTemplate extends StatelessWidget {
   final String courseName;
   final String courseImage;
+  final VoidCallback easyOntap;
+  final VoidCallback mediumOntap;
+  final VoidCallback hardOntap;
 
   const CourseDifficultySelectionTemplate({
     Key? key,
     required this.courseName,
     required this.courseImage,
+    required this.easyOntap,
+    required this.mediumOntap,
+    required this.hardOntap,
   }) : super(key: key);
 
   @override
@@ -60,7 +66,7 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   ElevatedButton hardButton() {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: hardOntap,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(width: 1, color: Colors.black),
         backgroundColor: CustomColors.kWhite,
@@ -77,7 +83,7 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   ElevatedButton mediumButton() {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: mediumOntap,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(width: 1, color: Colors.black),
         backgroundColor: CustomColors.kWhite,
@@ -94,7 +100,7 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   ElevatedButton easyButton() {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: easyOntap,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(width: 1, color: Colors.black),
         backgroundColor: CustomColors.kWhite,

@@ -6,7 +6,27 @@ class JavaScriptScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CourseDifficultySelectionTemplate(
-        courseName: 'JavaScript', courseImage: 'assets/icons/java-script.png');
+    void javaEasyButton(BuildContext context) {
+      //  Navigator.pushNamed(context, '/javascript/easy');
+      print('easyknk');
+    }
+
+    void javaMediumButton(BuildContext context) {
+      Navigator.pushNamed(context, '/javascript/medium');
+      print('medknk');
+    }
+
+    void javaHardButton(BuildContext context) {
+      Navigator.pushNamed(context, '/javascript/hard');
+      print('hrdknk');
+    }
+
+    return CourseDifficultySelectionTemplate(
+      courseName: 'JavaScript',
+      courseImage: 'assets/icons/java-script.png',
+      easyOntap: () => javaEasyButton(context),
+      mediumOntap: () => javaMediumButton(context),
+      hardOntap: () => javaHardButton(context),
+    );
   }
 }
