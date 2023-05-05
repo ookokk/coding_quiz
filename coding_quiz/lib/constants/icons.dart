@@ -7,4 +7,9 @@ class LessonIcons {
   static const String phpIcon = 'assets/icons/php.png';
   static const String pythonIcon = 'assets/icons/python.png';
   static const String typescriptIcon = 'assets/icons/typescript.png';
+  //lettter icons
+  static const String aIcon = 'assets/icons/a.png';
+  static const String bIcon = 'assets/icons/b.png';
+  static const String cIcon = 'assets/icons/c.png';
+  static const String dIcon = 'assets/icons/d.png';
 }

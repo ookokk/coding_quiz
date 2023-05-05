@@ -6,7 +6,27 @@ class HtmlScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CourseDifficultySelectionTemplate(
-        courseName: 'HTML', courseImage: 'assets/icons/html-5.png');
+    void htmlEasyButton(BuildContext context) {
+      Navigator.pushNamed(context, '/easy_html_screen');
+      print('easyknk');
+    }
+
+    void htmlMediumButton(BuildContext context) {
+      Navigator.pushNamed(context, '/medium_html_screen');
+      print('medknk');
+    }
+
+    void htmlHardButton(BuildContext context) {
+      Navigator.pushNamed(context, '/hard_html_screen');
+      print('hrdknk');
+    }
+
+    return CourseDifficultySelectionTemplate(
+      courseName: 'HTML',
+      courseImage: 'assets/icons/html-5.png',
+      easyOntap: () => htmlEasyButton(context),
+      mediumOntap: () => htmlMediumButton(context),
+      hardOntap: () => htmlHardButton(context),
+    );
   }
 }

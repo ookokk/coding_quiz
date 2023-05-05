@@ -7,7 +7,7 @@ class JavaScriptScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void javaEasyButton(BuildContext context) {
-      //  Navigator.pushNamed(context, '/javascript/easy');
+      Navigator.pushNamed(context, '/javascript/easy');
       print('easyknk');
     }
 

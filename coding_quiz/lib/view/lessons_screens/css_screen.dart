@@ -6,7 +6,27 @@ class CssScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CourseDifficultySelectionTemplate(
-        courseName: 'CSS', courseImage: 'assets/icons/css.png');
+    void cssEasyButton(BuildContext context) {
+      Navigator.pushNamed(context, '/easy_css_screen');
+      print('easyknk');
+    }
+
+    void cssMediumButton(BuildContext context) {
+      Navigator.pushNamed(context, '/medium_css_screen');
+      print('medknk');
+    }
+
+    void cssHardButton(BuildContext context) {
+      Navigator.pushNamed(context, '/hard_css_screen');
+      print('hrdknk');
+    }
+
+    return CourseDifficultySelectionTemplate(
+      courseName: 'CSS',
+      courseImage: 'assets/icons/css.png',
+      easyOntap: () => cssEasyButton(context),
+      mediumOntap: () => cssMediumButton(context),
+      hardOntap: () => cssHardButton(context),
+    );
   }
 }

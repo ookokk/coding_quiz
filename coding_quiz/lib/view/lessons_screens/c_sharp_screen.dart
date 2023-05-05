@@ -6,7 +6,27 @@ class CSharpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CourseDifficultySelectionTemplate(
-        courseName: 'C#', courseImage: 'assets/icons/c-sharp.png');
+    void cSharpEasyButton(BuildContext context) {
+      Navigator.pushNamed(context, '/easy_c_sharp_screen');
+      print('easyknk');
+    }
+
+    void cSharpMediumButton(BuildContext context) {
+      Navigator.pushNamed(context, '/medium_c_sharp_screen');
+      print('medknk');
+    }
+
+    void cSharpHardButton(BuildContext context) {
+      Navigator.pushNamed(context, '/hard_c_sharp_screen');
+      print('hrdknk');
+    }
+
+    return CourseDifficultySelectionTemplate(
+      courseName: 'C#',
+      courseImage: 'assets/icons/c-sharp.png',
+      easyOntap: () => cSharpEasyButton(context),
+      mediumOntap: () => cSharpMediumButton(context),
+      hardOntap: () => cSharpHardButton(context),
+    );
   }
 }

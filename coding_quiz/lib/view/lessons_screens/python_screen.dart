@@ -6,7 +6,27 @@ class PythonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CourseDifficultySelectionTemplate(
-        courseName: 'Python', courseImage: 'assets/icons/python.png');
+    void pythonEasyButton(BuildContext context) {
+      Navigator.pushNamed(context, '/easy_python_screen');
+      print('easyknk');
+    }
+
+    void pythonMediumButton(BuildContext context) {
+      Navigator.pushNamed(context, '/medium_python_screen');
+      print('medknk');
+    }
+
+    void pythonHardButton(BuildContext context) {
+      Navigator.pushNamed(context, '/hard_python_screen');
+      print('hrdknk');
+    }
+
+    return CourseDifficultySelectionTemplate(
+      courseName: 'Python',
+      courseImage: 'assets/icons/python.png',
+      easyOntap: () => pythonEasyButton(context),
+      mediumOntap: () => pythonMediumButton(context),
+      hardOntap: () => pythonHardButton(context),
+    );
   }
 }

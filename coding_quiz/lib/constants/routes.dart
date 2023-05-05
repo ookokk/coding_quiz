@@ -19,32 +19,32 @@ class Routes {
   static const String pythonScreen = '/python_screen';
   static const String typeScriptScreen = '/typescript_screen';
   //easy screens
-  static const String easyCSharpScreen = '/c_sharp_screen';
-  static const String easyCppScreen = '/cpp_screen';
-  static const String easyCssScreen = '/css_screen';
-  static const String easyHtmlScreen = '/html_screen';
-  static const String easyJavascriptScreen = '/javascript_screen';
-  static const String easyPhpScreen = '/php_screen';
-  static const String easyPythonScreen = '/python_screen';
-  static const String easyTypeScriptScreen = '/typescript_screen';
+  static const String easyCSharpScreen = '/easy_c_sharp_screen';
+  static const String easyCppScreen = '/easy_cpp_screen';
+  static const String easyCssScreen = '/easy_css_screen';
+  static const String easyHtmlScreen = '/easy_html_screen';
+  static const String easyJavascriptScreen = '/easy_java_script_screen';
+  static const String easyPhpScreen = '/easy_php_screen';
+  static const String easyPythonScreen = '/easy_python_screen';
+  static const String easyTypeScriptScreen = '/easy_typescript_screen';
   //medium screens
-  static const String mediumCSharpScreen = '/c_sharp_screen';
-  static const String mediumCppScreen = '/cpp_screen';
-  static const String mediumCssScreen = '/css_screen';
-  static const String mediumHtmlScreen = '/html_screen';
-  static const String mediumJavaScriptScreen = '/javascript_screen';
-  static const String mediumPhpScreen = '/php_screen';
-  static const String mediumPythonScreen = '/python_screen';
-  static const String mediumTypeScriptScreen = '/typescript_screen';
+  static const String mediumCSharpScreen = '/medium_c_sharp_screen';
+  static const String mediumCppScreen = '/medium_cpp_screen';
+  static const String mediumCssScreen = '/medium_css_screen';
+  static const String mediumHtmlScreen = '/medium_html_screen';
+  static const String mediumJavaScriptScreen = '/medium_javascript_screen';
+  static const String mediumPhpScreen = '/medium_php_screen';
+  static const String mediumPythonScreen = '/medium_python_screen';
+  static const String mediumTypeScriptScreen = '/medium_typescript_screen';
   //hard screens
-  static const String hardCSharpScreen = '/c_sharp_screen';
-  static const String hardCppScreen = '/cpp_screen';
-  static const String hardCssScreen = '/css_screen';
-  static const String hardHtmlScreen = '/html_screen';
-  static const String hardJavaScriptScreen = '/javascript_screen';
-  static const String hardPhpScreen = '/php_screen';
-  static const String hardPythonScreen = '/python_screen';
-  static const String hardTypeScriptScreen = '/typescript_screen';
+  static const String hardCSharpScreen = '/hard_c_sharp_screen';
+  static const String hardCppScreen = '/hard_cpp_screen';
+  static const String hardCssScreen = '/hard_css_screen';
+  static const String hardHtmlScreen = '/hard_html_screen';
+  static const String hardJavaScriptScreen = '/hard_javascript_screen';
+  static const String hardPhpScreen = '/hard_php_screen';
+  static const String hardPythonScreen = '/hard_python_screen';
+  static const String hardTypeScriptScreen = '/hard_typescript_screen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {

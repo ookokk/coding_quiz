@@ -6,7 +6,27 @@ class PhpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CourseDifficultySelectionTemplate(
-        courseName: 'PHP', courseImage: 'assets/icons/php.png');
+    void phpEasyButton(BuildContext context) {
+      Navigator.pushNamed(context, '/easy_php_screen');
+      print('easyknk');
+    }
+
+    void phpMediumButton(BuildContext context) {
+      Navigator.pushNamed(context, '/medium_php_screen');
+      print('medknk');
+    }
+
+    void phpHardButton(BuildContext context) {
+      Navigator.pushNamed(context, '/hard_php_screen');
+      print('hrdknk');
+    }
+
+    return CourseDifficultySelectionTemplate(
+      courseName: 'PHP',
+      courseImage: 'assets/icons/php.png',
+      easyOntap: () => phpEasyButton(context),
+      mediumOntap: () => phpMediumButton(context),
+      hardOntap: () => phpHardButton(context),
+    );
   }
 }
