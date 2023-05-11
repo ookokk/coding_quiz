@@ -9,6 +9,8 @@ class QuestionMapper {
     return Question(
       question: json['question'],
       answers: answers,
+      correctAnswerKey: json['correctAnswer'],
+      id: json['id'],
     );
   }
 

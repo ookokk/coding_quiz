@@ -1,9 +1,6 @@
 import 'package:coding_quiz/constants/icons.dart';
 import 'package:coding_quiz/constants/padding.dart';
-import 'package:coding_quiz/view/widgets/lessons_app_bar.dart';
 import 'package:flutter/material.dart';
-
-import '../../constants/color.dart';
 
 class QuizTemplate extends StatelessWidget {
   const QuizTemplate({Key? key}) : super(key: key);
