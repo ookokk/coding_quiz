@@ -2,8 +2,8 @@ import 'package:coding_quiz/constants/icons.dart';
 import 'package:coding_quiz/constants/padding.dart';
 import 'package:flutter/material.dart';
 
-class QuizTemplate extends StatelessWidget {
-  const QuizTemplate({Key? key}) : super(key: key);
+class QuizDeneme extends StatelessWidget {
+  const QuizDeneme({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

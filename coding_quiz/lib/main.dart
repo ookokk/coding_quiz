@@ -1,4 +1,4 @@
-import 'package:coding_quiz/view/quiz_screen.dart';
+import 'package:coding_quiz/models/quiz_template.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: '',
         theme: ThemeData(),
-        home: QuizScreen(
+        home: QuizTemplate(
           collectionName: 'html1',
         ));
   }

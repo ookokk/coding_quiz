@@ -2,12 +2,16 @@ class Question {
   String question;
   Map<String, bool> answers;
   String correctAnswerKey;
+  String? userAnswer;
+  bool isAnswered;
 
   Question({
     required this.question,
     required this.answers,
     required this.correctAnswerKey,
     required String id,
+    this.userAnswer,
+    this.isAnswered = false,
   });
 
   factory Question.fromJson(Map<String, dynamic> json) {
@@ -26,6 +30,7 @@ class Question {
       question: json['question'] != null ? json['question'] as String : '',
       answers: answers,
       correctAnswerKey: correctAnswerKey,
+      userAnswer: null,
     );
   }
 
@@ -38,6 +43,12 @@ class Question {
     }
     json['answers'] = answersJson;
     json['correctAnswerKey'] = correctAnswerKey;
+    json['userAnswer'] = userAnswer;
     return json;
+  }
+
+  void setUserAnswer(String answer) {
+    // userAnswer setter
+    userAnswer = answer;
   }
 }
