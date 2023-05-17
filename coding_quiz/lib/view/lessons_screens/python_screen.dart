@@ -8,17 +8,14 @@ class PythonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     void pythonEasyButton(BuildContext context) {
       Navigator.pushNamed(context, '/easy_python_screen');
-      print('easyknk');
     }
 
     void pythonMediumButton(BuildContext context) {
       Navigator.pushNamed(context, '/medium_python_screen');
-      print('medknk');
     }
 
     void pythonHardButton(BuildContext context) {
       Navigator.pushNamed(context, '/hard_python_screen');
-      print('hrdknk');
     }
 
     return CourseDifficultySelectionTemplate(

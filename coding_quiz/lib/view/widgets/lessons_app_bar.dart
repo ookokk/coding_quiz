@@ -7,28 +7,11 @@ class LessonsAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double iconSize = MediaQuery.of(context).size.width * 0.1;
     return Container(
       padding: const EdgeInsets.fromLTRB(8, 16, 8, 0),
       child: AppBar(
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.person,
-                  color: Colors.black,
-                  size: iconSize,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                  size: iconSize,
-                ))
-          ],
         ),
         backgroundColor: Colors.white,
         elevation: 0,

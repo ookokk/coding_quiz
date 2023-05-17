@@ -1,8 +1,12 @@
-import 'package:coding_quiz/models/quiz_template.dart';
+// ignore_for_file: use_key_in_widget_constructors
+
+import 'package:coding_quiz/view/splash_screen.dart';
+import 'package:coding_quiz/view/widgets/quiz_template.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'firebase_options.dart';
+import 'service/firebase_options.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -11,16 +15,17 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: '',
-        theme: ThemeData(),
-        home: QuizTemplate(
-          collectionName: 'html1',
-        ));
+    return ChangeNotifierProvider(
+      create: (_) => QuizTemplateNotifier(), // Düzeltme burada yapıldı
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: '',
+          theme: ThemeData(),
+          home: const SplashScreen()),
+    );
   }
 }

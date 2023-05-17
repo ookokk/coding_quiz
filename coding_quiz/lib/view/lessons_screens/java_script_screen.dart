@@ -8,17 +8,14 @@ class JavaScriptScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     void javaEasyButton(BuildContext context) {
       Navigator.pushNamed(context, '/javascript/easy');
-      print('easyknk');
     }
 
     void javaMediumButton(BuildContext context) {
       Navigator.pushNamed(context, '/javascript/medium');
-      print('medknk');
     }
 
     void javaHardButton(BuildContext context) {
       Navigator.pushNamed(context, '/javascript/hard');
-      print('hrdknk');
     }
 
     return CourseDifficultySelectionTemplate(

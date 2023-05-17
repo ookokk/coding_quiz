@@ -51,4 +51,8 @@ class Question {
     // userAnswer setter
     userAnswer = answer;
   }
+
+  MapEntry<String, bool> getCorrectAnswerEntry() {
+    return answers.entries.firstWhere((entry) => entry.value == true);
+  }
 }

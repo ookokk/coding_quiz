@@ -8,17 +8,14 @@ class PhpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     void phpEasyButton(BuildContext context) {
       Navigator.pushNamed(context, '/easy_php_screen');
-      print('easyknk');
     }
 
     void phpMediumButton(BuildContext context) {
       Navigator.pushNamed(context, '/medium_php_screen');
-      print('medknk');
     }
 
     void phpHardButton(BuildContext context) {
       Navigator.pushNamed(context, '/hard_php_screen');
-      print('hrdknk');
     }
 
     return CourseDifficultySelectionTemplate(

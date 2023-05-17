@@ -8,17 +8,14 @@ class CSharpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     void cSharpEasyButton(BuildContext context) {
       Navigator.pushNamed(context, '/easy_c_sharp_screen');
-      print('easyknk');
     }
 
     void cSharpMediumButton(BuildContext context) {
       Navigator.pushNamed(context, '/medium_c_sharp_screen');
-      print('medknk');
     }
 
     void cSharpHardButton(BuildContext context) {
       Navigator.pushNamed(context, '/hard_c_sharp_screen');
-      print('hrdknk');
     }
 
     return CourseDifficultySelectionTemplate(

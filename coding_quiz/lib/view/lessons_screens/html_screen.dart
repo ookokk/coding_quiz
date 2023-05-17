@@ -8,17 +8,14 @@ class HtmlScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     void htmlEasyButton(BuildContext context) {
       Navigator.pushNamed(context, '/easy_html_screen');
-      print('easyknk');
     }
 
     void htmlMediumButton(BuildContext context) {
       Navigator.pushNamed(context, '/medium_html_screen');
-      print('medknk');
     }
 
     void htmlHardButton(BuildContext context) {
       Navigator.pushNamed(context, '/hard_html_screen');
-      print('hrdknk');
     }
 
     return CourseDifficultySelectionTemplate(

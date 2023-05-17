@@ -1,7 +1,9 @@
+// ignore_for_file: unrelated_type_equality_checks
+
 import 'package:coding_quiz/models/question_model.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/padding.dart';
+import '../../constants/padding.dart';
 
 class ResultsScreen extends StatelessWidget {
   final List<Question> questions;
@@ -29,7 +31,7 @@ class ResultsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
+              const Expanded(
                 flex: 2,
                 child: Center(
                   child: Text(
@@ -46,7 +48,7 @@ class ResultsScreen extends StatelessWidget {
                 child: Center(
                   child: Text(
                     '$numCorrect/${questions.length} correct answers',
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ),
               ),
@@ -61,32 +63,32 @@ class ResultsScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Question ${index + 1}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           question.question,
-                          style: TextStyle(fontSize: 18),
+                          style: const TextStyle(fontSize: 18),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           'Your answer: ${userAnswers[index] == null ? 'Not answered' : userAnswers[index]! ? 'Correct' : 'Incorrect'}',
-                          style: TextStyle(fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           'Correct answer: ${question.answers.entries.firstWhere((entry) => entry.value == question.correctAnswerKey).key}',
-                          style: TextStyle(fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Divider(
                           thickness: 2,
                           color: Colors.grey[300],
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                       ],
                     );
                   },
@@ -103,7 +105,7 @@ class ResultsScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Back to quiz',
                     style: TextStyle(fontSize: 18),
                   ),

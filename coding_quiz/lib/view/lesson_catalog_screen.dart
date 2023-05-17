@@ -1,6 +1,5 @@
 import 'package:coding_quiz/constants/icons.dart';
 import 'package:coding_quiz/constants/padding.dart';
-import 'package:coding_quiz/constants/text_style.dart';
 import 'package:coding_quiz/view/widgets/lessons_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -16,14 +15,11 @@ class LessonCatalogScreen extends StatelessWidget {
           padding: MyPadding.defaultPaddingAll,
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Expanded(
-                    child: Text(
-                      'Hey Charley,what subject do you want to improve today?',
-                      style: kLargeText,
-                    ),
-                  )
+                      child:
+                          Text('Which lesson would you like to learn today?'))
                 ],
               ),
               const SizedBox(height: 30),

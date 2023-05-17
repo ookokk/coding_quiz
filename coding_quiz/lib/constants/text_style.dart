@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 TextStyle kVerySmallText = const TextStyle(
   fontFamily: 'ComicNeue-Regular',
-  fontSize: 18,
+  fontSize: 16,
 );
 
 TextStyle kSmallText = const TextStyle(
