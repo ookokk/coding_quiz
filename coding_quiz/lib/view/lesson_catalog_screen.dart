@@ -1,6 +1,7 @@
 import 'package:coding_quiz/constants/icons.dart';
 import 'package:coding_quiz/constants/padding.dart';
-import 'package:coding_quiz/view/widgets/lessons_app_bar.dart';
+import 'package:coding_quiz/constants/routes.dart';
+import 'package:coding_quiz/constants/text_style.dart';
 import 'package:flutter/material.dart';
 
 class LessonCatalogScreen extends StatelessWidget {
@@ -9,41 +10,46 @@ class LessonCatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const LessonsAppBar(),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: MyPadding.defaultPaddingAll,
-          child: Column(
-            children: [
-              const Row(
-                children: [
-                  Expanded(
-                      child:
-                          Text('Which lesson would you like to learn today?'))
-                ],
-              ),
-              const SizedBox(height: 30),
-              cppAndCsRow(),
-              const SizedBox(height: 30),
-              cssAndHtmlRow(),
-              const SizedBox(height: 30),
-              javaAndPhpRow(),
-              const SizedBox(height: 30),
-              pythonAndTypeScriptRow()
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            padding: MyPadding.defaultPaddingAll,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                        child: Text(
+                      'Which lesson would you like to learn today?',
+                      style: kUbuntuMediumText,
+                    ))
+                  ],
+                ),
+                const SizedBox(height: 30),
+                cppAndCsRow(context),
+                const SizedBox(height: 30),
+                cssAndHtmlRow(context),
+                const SizedBox(height: 30),
+                javaAndPhpRow(context),
+                const SizedBox(height: 30),
+                pythonAndTypeScriptRow(context)
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  Row pythonAndTypeScriptRow() {
+  Row pythonAndTypeScriptRow(BuildContext context) {
     return Row(
       children: [
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.pythonScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.pythonIcon)),
           ),
         ),
@@ -51,7 +57,9 @@ class LessonCatalogScreen extends StatelessWidget {
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.typeScriptScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.typescriptIcon)),
           ),
         ),
@@ -59,13 +67,15 @@ class LessonCatalogScreen extends StatelessWidget {
     );
   }
 
-  Row javaAndPhpRow() {
+  Row javaAndPhpRow(BuildContext context) {
     return Row(
       children: [
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.javaScriptScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.javaScriptIcon)),
           ),
         ),
@@ -73,7 +83,9 @@ class LessonCatalogScreen extends StatelessWidget {
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.phpScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.phpIcon)),
           ),
         ),
@@ -81,13 +93,15 @@ class LessonCatalogScreen extends StatelessWidget {
     );
   }
 
-  Row cssAndHtmlRow() {
+  Row cssAndHtmlRow(BuildContext context) {
     return Row(
       children: [
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.cssScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.cssIcon)),
           ),
         ),
@@ -95,7 +109,9 @@ class LessonCatalogScreen extends StatelessWidget {
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.htmlScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.htmlIcon)),
           ),
         ),
@@ -103,13 +119,15 @@ class LessonCatalogScreen extends StatelessWidget {
     );
   }
 
-  Row cppAndCsRow() {
+  Row cppAndCsRow(BuildContext context) {
     return Row(
       children: [
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.cppScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.cppIcon)),
           ),
         ),
@@ -117,7 +135,9 @@ class LessonCatalogScreen extends StatelessWidget {
         Expanded(
           flex: 2,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.cSharpScreen);
+            },
             child: const Image(image: AssetImage(LessonIcons.csharpIcon)),
           ),
         ),

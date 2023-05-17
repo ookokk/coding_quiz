@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'constants/routes.dart';
 import 'service/firebase_options.dart';
 
 void main() async {
@@ -20,10 +21,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => QuizTemplateNotifier(), // Düzeltme burada yapıldı
+      create: (_) => QuizTemplateNotifier(),
       child: MaterialApp(
+          title: 'Coding Quiz',
+          onGenerateRoute: Routes.generateRoute,
           debugShowCheckedModeBanner: false,
-          title: '',
           theme: ThemeData(),
           home: const SplashScreen()),
     );

@@ -25,14 +25,14 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: const Row(
+          leading: Row(
             children: [
               IconButton(
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back,
                   color: Colors.black,
                 ),
-                onPressed: null,
+                onPressed: () => Navigator.pop(context),
               )
             ],
           )),

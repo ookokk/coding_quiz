@@ -27,3 +27,5 @@ TextStyle kXLargeText = const TextStyle(
   fontFamily: 'ComicNeue-Bold',
   fontSize: 34,
 );
+TextStyle kUbuntuMediumText =
+    const TextStyle(fontFamily: 'Ubuntu-Medium', fontSize: 22);

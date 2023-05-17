@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
 
+import '../view/difficulties/easy/easy_cpp_screen.dart';
+import '../view/difficulties/easy/easy_csharp_screen.dart';
+import '../view/difficulties/easy/easy_css_screen.dart';
+import '../view/difficulties/easy/easy_html_screen.dart';
+import '../view/difficulties/easy/easy_java_script_screen.dart';
+import '../view/difficulties/easy/easy_php_screen.dart';
+import '../view/difficulties/easy/easy_python_screen.dart';
+import '../view/difficulties/easy/easy_type_script_screen.dart';
+import '../view/difficulties/hard/hard_cpp_screen.dart';
+import '../view/difficulties/hard/hard_csharp_screen.dart';
+import '../view/difficulties/hard/hard_css_screen.dart';
+import '../view/difficulties/hard/hard_html_screen.dart';
+import '../view/difficulties/hard/hard_java_script_screen.dart';
+import '../view/difficulties/hard/hard_php_screen.dart';
+import '../view/difficulties/hard/hard_python_screen.dart';
+import '../view/difficulties/hard/hard_type_script_screen.dart';
+import '../view/difficulties/medium/medium_cpp_screen.dart';
+import '../view/difficulties/medium/medium_csharp_screen.dart';
+import '../view/difficulties/medium/medium_css_screen.dart';
+import '../view/difficulties/medium/medium_html_screen.dart';
+import '../view/difficulties/medium/medium_java_script_screen.dart';
+import '../view/difficulties/medium/medium_php_screen.dart';
+import '../view/difficulties/medium/medium_python_screen.dart';
+import '../view/difficulties/medium/medium_type_script_screen.dart';
 import '../view/lessons_screens/c_sharp_screen.dart';
 import '../view/lessons_screens/cpp_screen.dart';
 import '../view/lessons_screens/css_screen.dart';
@@ -66,56 +90,58 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const TypeScriptScreen());
       //easy cases
       case easyCSharpScreen:
-        return MaterialPageRoute(builder: (_) => const CSharpScreen());
+        return MaterialPageRoute(builder: (_) => const EasyCSharpScreen());
       case easyCppScreen:
-        return MaterialPageRoute(builder: (_) => const CppScreen());
+        return MaterialPageRoute(builder: (_) => const EasyCppScreen());
       case easyCssScreen:
-        return MaterialPageRoute(builder: (_) => const CssScreen());
+        return MaterialPageRoute(builder: (_) => const EasyCssScreen());
       case easyHtmlScreen:
-        return MaterialPageRoute(builder: (_) => const HtmlScreen());
+        return MaterialPageRoute(builder: (_) => const EasyHtmlScreen());
       case easyJavascriptScreen:
-        return MaterialPageRoute(builder: (_) => const JavaScriptScreen());
+        return MaterialPageRoute(builder: (_) => const EasyJavaScriptScreen());
       case easyPhpScreen:
-        return MaterialPageRoute(builder: (_) => const PhpScreen());
+        return MaterialPageRoute(builder: (_) => const EasyPhpScreen());
       case easyPythonScreen:
-        return MaterialPageRoute(builder: (_) => const PythonScreen());
+        return MaterialPageRoute(builder: (_) => const EasyPythonScreen());
       case easyTypeScriptScreen:
-        return MaterialPageRoute(builder: (_) => const TypeScriptScreen());
+        return MaterialPageRoute(builder: (_) => const EasyTypeScriptScreen());
 
       //medium cases
       case mediumCSharpScreen:
-        return MaterialPageRoute(builder: (_) => const CSharpScreen());
+        return MaterialPageRoute(builder: (_) => const MediumCSharpScreen());
       case mediumCppScreen:
-        return MaterialPageRoute(builder: (_) => const CppScreen());
+        return MaterialPageRoute(builder: (_) => const MediumCppScreen());
       case mediumCssScreen:
-        return MaterialPageRoute(builder: (_) => const CssScreen());
+        return MaterialPageRoute(builder: (_) => const MediumCssScreen());
       case mediumHtmlScreen:
-        return MaterialPageRoute(builder: (_) => const HtmlScreen());
+        return MaterialPageRoute(builder: (_) => const MediumHtmlScreen());
       case mediumJavaScriptScreen:
-        return MaterialPageRoute(builder: (_) => const JavaScriptScreen());
+        return MaterialPageRoute(
+            builder: (_) => const MediumJavaScriptScreen());
       case mediumPhpScreen:
-        return MaterialPageRoute(builder: (_) => const PhpScreen());
+        return MaterialPageRoute(builder: (_) => const MediumPhpScreen());
       case mediumPythonScreen:
-        return MaterialPageRoute(builder: (_) => const PythonScreen());
+        return MaterialPageRoute(builder: (_) => const MediumPythonScreen());
       case mediumTypeScriptScreen:
-        return MaterialPageRoute(builder: (_) => const TypeScriptScreen());
+        return MaterialPageRoute(
+            builder: (_) => const MediumTypeScriptScreen());
       //hard cases
       case hardCSharpScreen:
-        return MaterialPageRoute(builder: (_) => const CSharpScreen());
+        return MaterialPageRoute(builder: (_) => const HardCSharpScreen());
       case hardCppScreen:
-        return MaterialPageRoute(builder: (_) => const CppScreen());
+        return MaterialPageRoute(builder: (_) => const HardCppScreen());
       case hardCssScreen:
-        return MaterialPageRoute(builder: (_) => const CssScreen());
+        return MaterialPageRoute(builder: (_) => const HardCssScreen());
       case hardHtmlScreen:
-        return MaterialPageRoute(builder: (_) => const HtmlScreen());
+        return MaterialPageRoute(builder: (_) => const HardHtmlScreen());
       case hardJavaScriptScreen:
-        return MaterialPageRoute(builder: (_) => const JavaScriptScreen());
+        return MaterialPageRoute(builder: (_) => const HardJavaScriptScreen());
       case hardPhpScreen:
-        return MaterialPageRoute(builder: (_) => const PhpScreen());
+        return MaterialPageRoute(builder: (_) => const HardPhpScreen());
       case hardPythonScreen:
-        return MaterialPageRoute(builder: (_) => const PythonScreen());
+        return MaterialPageRoute(builder: (_) => const HardPythonScreen());
       case hardTypeScriptScreen:
-        return MaterialPageRoute(builder: (_) => const TypeScriptScreen());
+        return MaterialPageRoute(builder: (_) => const HardTypeScriptScreen());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
