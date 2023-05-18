@@ -1,8 +1,6 @@
-import 'package:coding_quiz/constants/color.dart';
 import 'package:coding_quiz/constants/icons.dart';
 import 'package:coding_quiz/constants/padding.dart';
 import 'package:coding_quiz/constants/routes.dart';
-import 'package:coding_quiz/constants/text_style.dart';
 import 'package:flutter/material.dart';
 
 class LessonCatalogScreen extends StatelessWidget {
