@@ -1,11 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors
-
 import 'package:coding_quiz/view/splash_screen.dart';
 import 'package:coding_quiz/view/widgets/quiz_template.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'constants/routes.dart';
 import 'service/firebase_options.dart';
 

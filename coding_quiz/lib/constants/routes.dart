@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../view/difficulties/easy/easy_cpp_screen.dart';
 import '../view/difficulties/easy/easy_csharp_screen.dart';
 import '../view/difficulties/easy/easy_css_screen.dart';
