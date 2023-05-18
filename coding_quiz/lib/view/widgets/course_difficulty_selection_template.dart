@@ -21,43 +21,46 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          leading: Row(
-            children: [
-              IconButton(
-                icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
+    return Container(
+      padding: MyPadding.defaultPaddingAll,
+      color: Colors.white,
+      child: Scaffold(
+        appBar: AppBar(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            leading: Row(
+              children: [
+                IconButton(
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
+                  onPressed: () => Navigator.pop(context),
+                )
+              ],
+            )),
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  courseName,
+                  textAlign: TextAlign.center,
+                  style: kXLargeText,
                 ),
-                onPressed: () => Navigator.pop(context),
-              )
-            ],
-          )),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: MyPadding.defaultPaddingAll,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                courseName,
-                textAlign: TextAlign.center,
-                style: kXLargeText,
-              ),
-              const SizedBox(height: 40),
-              selectedCourseImageBox(context),
-              const SizedBox(height: 50),
-              easyButton(),
-              const SizedBox(height: 20),
-              mediumButton(),
-              const SizedBox(height: 20),
-              hardButton(),
-              const SizedBox(height: 20),
-            ],
+                const SizedBox(height: 40),
+                selectedCourseImageBox(context),
+                const SizedBox(height: 50),
+                easyButton(),
+                const SizedBox(height: 20),
+                mediumButton(),
+                const SizedBox(height: 20),
+                hardButton(),
+                const SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),

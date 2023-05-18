@@ -1,3 +1,4 @@
+import 'package:coding_quiz/constants/color.dart';
 import 'package:coding_quiz/constants/icons.dart';
 import 'package:coding_quiz/constants/padding.dart';
 import 'package:coding_quiz/constants/routes.dart';
@@ -10,21 +11,25 @@ class LessonCatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Expanded(
+            child: Image.asset(
+              'assets/icons/textlogo.png',
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
+          ),
+        ],
+        elevation: 1,
+        backgroundColor: Color(0XFFAEE2FF),
+        shape: StadiumBorder(),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             padding: MyPadding.defaultPaddingAll,
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                        child: Text(
-                      'Which lesson would you like to learn today?',
-                      style: kUbuntuMediumText,
-                    ))
-                  ],
-                ),
                 const SizedBox(height: 30),
                 cppAndCsRow(context),
                 const SizedBox(height: 30),
