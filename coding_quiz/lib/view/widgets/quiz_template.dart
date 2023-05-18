@@ -57,16 +57,7 @@ class _QuizTemplateState extends State<QuizTemplate> {
             appBar: AppBar(
               backgroundColor: CustomColors.kWhite,
               elevation: 0,
-              leading: IconButton(
-                icon: Icon(
-                  Icons.arrow_back,
-                  size: MediaQuery.of(context).size.height * 0.03,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
+              leading: AppBarBackButton(context),
             ),
             backgroundColor: Colors.white70,
             body: StreamBuilder<QuerySnapshot>(
@@ -133,6 +124,19 @@ class _QuizTemplateState extends State<QuizTemplate> {
           ),
         ),
       ),
+    );
+  }
+
+  IconButton AppBarBackButton(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+        Icons.arrow_back,
+        size: MediaQuery.of(context).size.height * 0.03,
+        color: Colors.black,
+      ),
+      onPressed: () {
+        Navigator.pop(context);
+      },
     );
   }
 

@@ -48,7 +48,6 @@ class Question {
   }
 
   void setUserAnswer(String answer) {
-    // userAnswer setter
     userAnswer = answer;
   }
 

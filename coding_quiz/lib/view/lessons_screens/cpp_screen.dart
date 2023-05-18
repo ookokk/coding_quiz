@@ -21,9 +21,9 @@ class CppScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'C++',
       courseImage: 'assets/icons/c++.png',
-      easyOntap: () => cppEasyButton(context),
-      mediumOntap: () => cppMediumButton(context),
-      hardOntap: () => cppHardButton(context),
+      easyOnTap: () => cppEasyButton(context),
+      mediumOnTap: () => cppMediumButton(context),
+      hardOnTap: () => cppHardButton(context),
     );
   }
 }

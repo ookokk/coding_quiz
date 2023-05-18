@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 class CourseDifficultySelectionTemplate extends StatelessWidget {
   final String courseName;
   final String courseImage;
-  final VoidCallback easyOntap;
-  final VoidCallback mediumOntap;
-  final VoidCallback hardOntap;
+  final VoidCallback easyOnTap;
+  final VoidCallback mediumOnTap;
+  final VoidCallback hardOnTap;
 
   const CourseDifficultySelectionTemplate({
     Key? key,
     required this.courseName,
     required this.courseImage,
-    required this.easyOntap,
-    required this.mediumOntap,
-    required this.hardOntap,
+    required this.easyOnTap,
+    required this.mediumOnTap,
+    required this.hardOnTap,
   }) : super(key: key);
 
   @override
@@ -66,7 +66,7 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   ElevatedButton hardButton() {
     return ElevatedButton(
-      onPressed: hardOntap,
+      onPressed: hardOnTap,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(width: 1, color: Colors.black),
         backgroundColor: CustomColors.kWhite,
@@ -83,7 +83,7 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   ElevatedButton mediumButton() {
     return ElevatedButton(
-      onPressed: mediumOntap,
+      onPressed: mediumOnTap,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(width: 1, color: Colors.black),
         backgroundColor: CustomColors.kWhite,
@@ -100,7 +100,7 @@ class CourseDifficultySelectionTemplate extends StatelessWidget {
 
   ElevatedButton easyButton() {
     return ElevatedButton(
-      onPressed: easyOntap,
+      onPressed: easyOnTap,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(width: 1, color: Colors.black),
         backgroundColor: CustomColors.kWhite,

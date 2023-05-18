@@ -21,9 +21,9 @@ class PhpScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'PHP',
       courseImage: 'assets/icons/php.png',
-      easyOntap: () => phpEasyButton(context),
-      mediumOntap: () => phpMediumButton(context),
-      hardOntap: () => phpHardButton(context),
+      easyOnTap: () => phpEasyButton(context),
+      mediumOnTap: () => phpMediumButton(context),
+      hardOnTap: () => phpHardButton(context),
     );
   }
 }

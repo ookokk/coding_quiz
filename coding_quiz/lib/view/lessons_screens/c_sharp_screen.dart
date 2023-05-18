@@ -21,9 +21,9 @@ class CSharpScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'C#',
       courseImage: 'assets/icons/c-sharp.png',
-      easyOntap: () => cSharpEasyButton(context),
-      mediumOntap: () => cSharpMediumButton(context),
-      hardOntap: () => cSharpHardButton(context),
+      easyOnTap: () => cSharpEasyButton(context),
+      mediumOnTap: () => cSharpMediumButton(context),
+      hardOnTap: () => cSharpHardButton(context),
     );
   }
 }

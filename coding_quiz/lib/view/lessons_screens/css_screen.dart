@@ -21,9 +21,9 @@ class CssScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'CSS',
       courseImage: 'assets/icons/css.png',
-      easyOntap: () => cssEasyButton(context),
-      mediumOntap: () => cssMediumButton(context),
-      hardOntap: () => cssHardButton(context),
+      easyOnTap: () => cssEasyButton(context),
+      mediumOnTap: () => cssMediumButton(context),
+      hardOnTap: () => cssHardButton(context),
     );
   }
 }

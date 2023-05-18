@@ -21,9 +21,9 @@ class JavaScriptScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'JavaScript',
       courseImage: 'assets/icons/java-script.png',
-      easyOntap: () => javaEasyButton(context),
-      mediumOntap: () => javaMediumButton(context),
-      hardOntap: () => javaHardButton(context),
+      easyOnTap: () => javaEasyButton(context),
+      mediumOnTap: () => javaMediumButton(context),
+      hardOnTap: () => javaHardButton(context),
     );
   }
 }

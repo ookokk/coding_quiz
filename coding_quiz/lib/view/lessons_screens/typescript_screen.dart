@@ -21,9 +21,9 @@ class TypeScriptScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'TypeScript',
       courseImage: 'assets/icons/typescript.png',
-      easyOntap: () => typeScriptEasyButton(context),
-      mediumOntap: () => typeScriptMediumButton(context),
-      hardOntap: () => typeScriptHardButton(context),
+      easyOnTap: () => typeScriptEasyButton(context),
+      mediumOnTap: () => typeScriptMediumButton(context),
+      hardOnTap: () => typeScriptHardButton(context),
     );
   }
 }

@@ -21,9 +21,9 @@ class HtmlScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'HTML',
       courseImage: 'assets/icons/html-5.png',
-      easyOntap: () => htmlEasyButton(context),
-      mediumOntap: () => htmlMediumButton(context),
-      hardOntap: () => htmlHardButton(context),
+      easyOnTap: () => htmlEasyButton(context),
+      mediumOnTap: () => htmlMediumButton(context),
+      hardOnTap: () => htmlHardButton(context),
     );
   }
 }

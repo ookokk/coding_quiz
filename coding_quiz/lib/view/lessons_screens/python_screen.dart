@@ -21,9 +21,9 @@ class PythonScreen extends StatelessWidget {
     return CourseDifficultySelectionTemplate(
       courseName: 'Python',
       courseImage: 'assets/icons/python.png',
-      easyOntap: () => pythonEasyButton(context),
-      mediumOntap: () => pythonMediumButton(context),
-      hardOntap: () => pythonHardButton(context),
+      easyOnTap: () => pythonEasyButton(context),
+      mediumOnTap: () => pythonMediumButton(context),
+      hardOnTap: () => pythonHardButton(context),
     );
   }
 }
