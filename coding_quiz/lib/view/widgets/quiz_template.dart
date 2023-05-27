@@ -21,9 +21,18 @@ class QuizTemplate extends StatefulWidget {
 }
 
 class QuizTemplateNotifier extends ChangeNotifier {
+  int currentPage = 0;
+
+  void setPage(int page) {
+    // Sayfa numarasını güncelleyen bir yöntem eklendi
+    currentPage = page;
+    notifyListeners();
+  }
+
   List<bool?> userAnswers = [];
   final List<Question> _questions = [];
   List<Question> get questions => _questions;
+
   void resetQuiz() {
     userAnswers = List<bool?>.filled(userAnswers.length, null);
     notifyListeners();
@@ -43,12 +52,16 @@ class _QuizTemplateState extends State<QuizTemplate> {
   void initState() {
     super.initState();
     quizTemplateNotifier = QuizTemplateNotifier();
+    pageController.addListener(() {
+      // Sayfa değişikliklerini takip eden bir listener eklendi
+      quizTemplateNotifier.setPage(pageController.page!.round());
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<QuizTemplateNotifier>(
-      create: (_) => QuizTemplateNotifier(),
+      create: (_) => quizTemplateNotifier,
       child: SafeArea(
         child: Container(
           color: CustomColors.kWhite,
@@ -80,6 +93,7 @@ class _QuizTemplateState extends State<QuizTemplate> {
                       .toList();
 
                   return PageView.builder(
+                    physics: NeverScrollableScrollPhysics(),
                     controller: pageController,
                     itemCount: questions.length,
                     itemBuilder: (context, index) {
@@ -90,31 +104,28 @@ class _QuizTemplateState extends State<QuizTemplate> {
                             List<bool?>.filled(questions.length, null);
                       }
 
-                      return SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text('Question ${index + 1}', style: kXLargeText),
-                            const SizedBox(height: 30),
-                            Text(question.question, style: kMediumText),
-                            const SizedBox(height: 30),
-                            Column(
-                              children: question.answers.entries.map((entry) {
-                                final int answerIndex = question.answers.keys
-                                    .toList()
-                                    .indexOf(entry.key);
+                      return ListView(
+                        children: [
+                          Text('Question ${index + 1}', style: kXLargeText),
+                          const SizedBox(height: 30),
+                          Text(question.question, style: kMediumText),
+                          const SizedBox(height: 30),
+                          Column(
+                            children: question.answers.entries.map((entry) {
+                              final int answerIndex = question.answers.keys
+                                  .toList()
+                                  .indexOf(entry.key);
 
-                                return SizedBox(
-                                  width: MediaQuery.of(context).size.width,
-                                  child: buildOptionsButton(
-                                      index, entry, context, answerIndex),
-                                );
-                              }).toList(),
-                            ),
-                            const SizedBox(height: 30),
-                            buildNextQuestionButton(),
-                          ],
-                        ),
+                              return SizedBox(
+                                width: MediaQuery.of(context).size.width,
+                                child: buildOptionsButton(
+                                    index, entry, context, answerIndex),
+                              );
+                            }).toList(),
+                          ),
+                          const SizedBox(height: 30),
+                          buildNextQuestionButton(),
+                        ],
                       );
                     },
                   );
@@ -152,18 +163,21 @@ class _QuizTemplateState extends State<QuizTemplate> {
         showDialog(
           context: context,
           builder: (BuildContext context) {
-            return AlertDialog(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                backgroundColor: kDefaultIconDarkColor,
-                title: Text(
-                  'Your Answer: ${quizTemplateNotifier.userAnswers[index]}',
-                  style: const TextStyle(color: Colors.white70),
-                ));
+            return AbsorbPointer(
+              absorbing: true,
+              child: AlertDialog(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  backgroundColor: kDefaultIconDarkColor,
+                  title: Text(
+                    'Your Answer: ${quizTemplateNotifier.userAnswers[index]}',
+                    style: const TextStyle(color: Colors.white70),
+                  )),
+            );
           },
         );
-        Future.delayed(const Duration(seconds: 2))
-            .then((value) => Navigator.pop(context));
+        Future.delayed(const Duration(milliseconds: 1000))
+            .then((value) => Navigator.of(context).pop());
       },
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.05,
